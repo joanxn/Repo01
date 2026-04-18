@@ -1,5 +1,5 @@
 {
-    "name": "InterSystems IRIS Health Codespace",
+    "name": "IRIS Health Lite",
     "dockerComposeFile": "docker-compose.yml",
     "service": "iris",
     "workspaceFolder": "/home/vscode/workspace",
@@ -7,20 +7,10 @@
         "vscode": {
             "extensions": [
                 "intersystems-community.vscode-objectscript",
-                "intersystems.language-server",
-                "intersystems-community.interoperability-explorer"
-            ],
-            "settings": {
-                "objectscript.conn": {
-                    "active": true,
-                    "host": "localhost",
-                    "port": 52773,
-                    "username": "_SYSTEM",
-                    "password": "SYS"
-                }
-            }
+                "intersystems.language-server"
+            ]
         }
     },
-    "forwardPorts": [52773, 1972],
-    "remoteUser": "vscode"
+    "forwardPorts": [52773],
+    "postCreateCommand": "chmod -R 777 /home/vscode/workspace"
 }
