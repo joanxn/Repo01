@@ -1,0 +1,26 @@
+{
+    "name": "InterSystems IRIS Health Codespace",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "iris",
+    "workspaceFolder": "/home/vscode/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "intersystems-community.vscode-objectscript",
+                "intersystems.language-server",
+                "intersystems-community.interoperability-explorer"
+            ],
+            "settings": {
+                "objectscript.conn": {
+                    "active": true,
+                    "host": "localhost",
+                    "port": 52773,
+                    "username": "_SYSTEM",
+                    "password": "SYS"
+                }
+            }
+        }
+    },
+    "forwardPorts": [52773, 1972],
+    "remoteUser": "vscode"
+}
